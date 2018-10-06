@@ -1,0 +1,12 @@
+.dog{
+    border: 1px solid #000;
+    width: 90px;
+    height: 90px;
+};
+
+
+
+.dog,.r,.a{
+display: inline !important;
+};
+

@@ -1,0 +1,47 @@
+@media only screen and (orientation:portrait){
+    #contenido {  
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+
+    }
+}
+
+@media only screen and (orientation:landscape)and(min-width : 321px){
+
+    #contenido {  
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+}
+
+
+/* los Media Query Permiten adaptar la vista de la aplicacion segun el dispositivo, ayuda a verlo de manera mas responsiva
+https://developer.mozilla.org/es/docs/CSS/Media_queries <--- aqui puedes encontrar usos, tipos, medidas, etc.
+ademas aqui podras encontrar un listado de media queries para distintos tamaños -->  https://www.bufa.es/css3-listado-media-queries/
+los Media Query  usan operadores logicos (que tambien aparecen en la documentacion) y aqui
+estamos usando el operador "and" que sirve para unir varios factores multimedia
+
+con @media estamos llamando al uso de un mediaquery para poder tratar de adaptar nuestra pantalla.
+la condicional "only" dice que SOLO se aplicaran los estilos css cuando la pantalla del dispositivo tenga las medidas que exige el media query ( como el min-width)
+screen es uno de los tantos tipos de pantalla de dispositivo que hay. Screen es universal, es decir que cumplira todo lo que diga el query mientras sea cualquier pantalla donde se muestre la aplicacion
+and es un operador logico que UNE varios factores multimedia
+orientation, es una accion. Nos pide en que orientacion debe estar la pantalla, si portrait (vertical) o landscape (horizontal)
+
+a la etiqueta body le coloque un ID llamado contenido, que lo use para poder darle los estilos.
+OJO aqui!, no todos los navegadores y dispositivos soportan todas las funciones  que uno coloca
+por eso se colocan propiedades para cada tipo de navegador y dispositivo:
+
+webkit : para navegadores como safari y chrome (aveces soporta opera)
+moz: para mozilla firefox
+o : opera
+ms :internet explorer
+
+asi ningun navegador explotara o te mostrara errores al momento de ejecutar la aplicacion!
+
+con esto podras ya desarrollar tranquilamente para moviles.
